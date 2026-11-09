@@ -1,6 +1,7 @@
 .vscode
 .DS_Store
-/*.tmp
+*.tmp
+.coverage
 __pycache__/
 .pytest_cache/
 .idea/
