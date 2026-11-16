@@ -11,6 +11,11 @@ Register With Already Taken Username And Valid Password
     Input Credentials  kalle  vesi1234
     Output Should Contain  User with username kalle already exists
 
+Register With Too Short Username And Valid Password
+    Input Credentials  ki  katti123
+    Output Should Contain  Username must be at least three characters long
+
+
 *** Keywords ***
 Input New Command And Create User
     Create User  kalle  kalle123
