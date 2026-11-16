@@ -40,5 +40,7 @@ class UserService:
             raise UserInputError("Username must only contain uncapitalized letters from a-z")
         if len(username) < 3:
             raise UserInputError("Username must be at least three characters long")
+        if len(password) < 8:
+            raise UserInputError("Password must be at least eight characters long")
 
         # toteuta loput tarkastukset tänne ja nosta virhe virhetilanteissa
