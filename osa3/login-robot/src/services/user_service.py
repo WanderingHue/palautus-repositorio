@@ -36,6 +36,8 @@ class UserService:
     def validate(self, username, password):
         if not username or not password:
             raise UserInputError("Username and password are required")
+        if not re.match("^[a-z]+$", username):
+            raise UserInputError("Username must only contain uncapitalized letters from a-z")
         if len(username) < 3:
             raise UserInputError("Username must be at least three characters long")
 
