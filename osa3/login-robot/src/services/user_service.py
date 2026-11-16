@@ -42,5 +42,5 @@ class UserService:
             raise UserInputError("Username must be at least three characters long")
         if len(password) < 8:
             raise UserInputError("Password must be at least eight characters long")
-
-        # toteuta loput tarkastukset tänne ja nosta virhe virhetilanteissa
+        if not any(char.isdigit() for char in password):
+            raise UserInputError("Password must contain numbers and letters")
