@@ -19,6 +19,9 @@ Register With Enough Long But Invalid Username And Valid Password
     Input Credentials  kissa123  katti123
     Output Should Contain  Username must only contain uncapitalized letters from a-z
 
+Register With Valid Username And Too Short Password
+    Input Credentials  kissa  katti
+    Output Should Contain  Password must be at least eight characters long
 
 *** Keywords ***
 Input New Command And Create User
