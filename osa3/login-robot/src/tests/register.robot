@@ -23,6 +23,10 @@ Register With Valid Username And Too Short Password
     Input Credentials  kissa  katti
     Output Should Contain  Password must be at least eight characters long
 
+Register With Valid Username And Long Enough Password Containing Only Letters
+    Input Credentials  kissa  katinkulta
+    Output Should Contain  Password must contain numbers and letters
+
 *** Keywords ***
 Input New Command And Create User
     Create User  kalle  kalle123
