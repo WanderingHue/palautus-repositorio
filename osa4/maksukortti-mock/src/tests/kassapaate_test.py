@@ -31,3 +31,11 @@ class TestKassapaate(unittest.TestCase):
         self.kassa.lataa(maksukortti_mock, 32)
 
         maksukortti_mock.lataa.assert_called_with(32)
+
+    def test_ladataan_korttiin_negatiivinen_maara_rahaa(self):
+        maksukortti_mock = Mock()
+        maksukortti_mock.saldo = 0
+
+        self.kassa.lataa(maksukortti_mock, -23)
+
+        maksukortti_mock.lataa.assert_not_called()
